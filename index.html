@@ -222,30 +222,29 @@
             круизе-экспедиции «На волне Левина».
           </p>
           <form
-            class="modal__form"
-            id="rsvp-form"
             action="https://formsubmit.co/varvara.osoka@gmail.com"
             method="POST"
-            target="rsvp-submit-frame"
+            class="rsvp-form modal__form"
+            id="rsvp-form"
           >
             <input type="hidden" name="_subject" value="Подтверждение участия — На волне Левина" />
             <input type="hidden" name="_captcha" value="false" />
-            <input
-              type="hidden"
-              name="event"
-              value="Круиз-экспедиция «На волне Левина», 7 июля 2026"
-            />
-            <label class="modal__field">
+            <input type="hidden" name="_template" value="table" />
+            <input type="hidden" name="_next" value="https://utkaflex.github.io/Invitation/thanks.html" />
+            <input type="hidden" name="_url" value="https://utkaflex.github.io/Invitation/" />
+            <input type="hidden" name="Мероприятие" value="Круиз-экспедиция «На волне Левина», 7 июля 2026" />
+            <label class="modal__field" for="fullName">
               <span>ФИО</span>
               <input
-                type="text"
+                id="fullName"
                 name="ФИО"
+                type="text"
                 placeholder="Например, Иванов Иван Иванович"
                 required
               />
             </label>
             <div class="modal__actions">
-              <button class="button button--primary modal__submit" type="submit">
+              <button class="button button--primary modal__submit rsvp-form__submit" type="submit">
                 Отправить подтверждение
               </button>
               <button class="button button--secondary modal__dismiss" type="button" data-close-modal>
@@ -254,19 +253,7 @@
             </div>
           </form>
         </div>
-        <div class="modal__content modal__content--success" hidden>
-          <h2 class="modal__title">Подтверждение участия</h2>
-          <p class="modal__text">Спасибо! Подтверждение подготовлено к отправке.</p>
-          <button class="button button--primary modal__dismiss" type="button" data-close-modal>
-            Закрыть
-          </button>
-        </div>
       </div>
-      <iframe
-        name="rsvp-submit-frame"
-        title="Скрытая отправка формы подтверждения"
-        hidden
-      ></iframe>
     </div>
 
     <script src="./script.js"></script>

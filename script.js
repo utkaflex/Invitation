@@ -1,19 +1,13 @@
-const FORM_ENDPOINT = "https://formsubmit.co/varvara.osoka@gmail.com";
-
 function bindRsvpLinks() {
   const modal = document.getElementById("rsvp-modal");
   const openers = document.querySelectorAll(".js-rsvp-link");
   const closers = modal?.querySelectorAll("[data-close-modal]") ?? [];
   const form = document.getElementById("rsvp-form");
-  const formContent = modal?.querySelector(".modal__content--form");
-  const successContent = modal?.querySelector(".modal__content--success");
-  const nameField = form?.querySelector('input[name="ФИО"]');
+  const nameField = form?.querySelector("#fullName");
 
-  if (!modal || !form || !formContent || !successContent || !nameField) {
+  if (!modal || !form || !nameField) {
     return;
   }
-
-  form.setAttribute("action", FORM_ENDPOINT);
 
   function openModal(event) {
     event.preventDefault();
@@ -27,17 +21,6 @@ function bindRsvpLinks() {
     modal.classList.remove("is-open");
     modal.setAttribute("aria-hidden", "true");
     document.body.style.overflow = "";
-  }
-
-  function showFormState() {
-    form.reset();
-    formContent.hidden = false;
-    successContent.hidden = true;
-  }
-
-  function showSuccessState() {
-    formContent.hidden = true;
-    successContent.hidden = false;
   }
 
   openers.forEach((link) => {
@@ -58,17 +41,6 @@ function bindRsvpLinks() {
   document.addEventListener("keydown", (event) => {
     if (event.key === "Escape" && modal.classList.contains("is-open")) {
       closeModal();
-    }
-  });
-
-  form.addEventListener("submit", () => {
-    showSuccessState();
-    window.setTimeout(closeModal, 1400);
-  });
-
-  modal.addEventListener("transitionend", () => {
-    if (!modal.classList.contains("is-open")) {
-      showFormState();
     }
   });
 }
