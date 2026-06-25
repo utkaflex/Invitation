@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>На волне Левина</title>
+    <meta
+      name="description"
+      content="Приглашение на юбилейный круиз-экспедицию «На волне Левина»."
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="hero section reveal" id="hero">
+        <div class="hero__bg" aria-hidden="true"></div>
+        <div class="hero__overlay" aria-hidden="true"></div>
+        <div class="hero__water" aria-hidden="true"></div>
+        <div class="hero__portrait-wrap" aria-hidden="true">
+          <img
+            class="hero__portrait"
+            src="./assets/images/lev-portrait-cutout.png"
+            alt=""
+          />
+        </div>
+        <div class="hero__content">
+          <!-- При необходимости замените логотип на другой локальный файл из assets/images/. -->
+          <img
+            class="hero__logo"
+            src="./assets/images/logo-main.png"
+            alt="Логотип приглашения «На волне Левина»"
+          />
+          <p class="hero__eyebrow">Юбилейный круиз-экспедиция</p>
+          <h1 class="hero__title">НА ВОЛНЕ ЛЕВИНА</h1>
+          <p class="hero__date">7 июля 2026 года</p>
+          <div class="hero__actions">
+            <a class="button button--primary hero__button js-rsvp-link" href="#rsvp">
+              Подтвердить участие
+            </a>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <section class="invitation section reveal" aria-labelledby="invitation-title">
+          <div class="section__frame invitation__grid invite-card">
+            <div class="invitation__photo-card invite-card__photo-wrap">
+              <!-- При необходимости замените портрет на другой локальный файл. -->
+              <img
+                class="invite-card__photo"
+                src="./assets/images/lev-portrait-cutout.png"
+                alt="Портрет Льва Юрьевича для приглашения"
+              />
+            </div>
+            <div class="invitation__content invite-card__content">
+              <p class="section__kicker">Личное приглашение</p>
+              <h2 id="invitation-title" class="section__title">Приглашение на борт</h2>
+              <p>
+                Приглашаю Вас принять участие в круизе-экспедиции «На волне
+                Левина»!
+              </p>
+              <p>
+                Буду рад провести этот вечер вместе с Вами на красавице Каме.
+              </p>
+              <p>
+                Вспомним яркие моменты, ощутим радость встречи и поднимем бокал
+                за новые горизонты и открытия.
+              </p>
+              <a class="button button--secondary invitation__button js-rsvp-link" href="#rsvp">
+                Подтвердить присутствие
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <section class="mood-photo section reveal" aria-label="Вечер на борту">
+          <img
+            class="mood-photo__image"
+            src="./assets/images/reference-screen.jpg"
+            alt="Гости с бокалами на борту во время вечернего круиза"
+          />
+        </section>
+
+        <section class="crew section reveal" aria-labelledby="crew-title">
+          <div class="section__frame crew-card route-card">
+            <p class="section__kicker">Курс на встречу</p>
+            <h2 id="crew-title" class="section__title">Сбор экипажа</h2>
+
+            <dl class="route-list">
+              <div class="route-row">
+                <dt>Дата рейса</dt>
+                <dd>7 июля 2026</dd>
+              </div>
+
+              <div class="route-row">
+                <dt>Время сбора</dt>
+                <dd>18:00</dd>
+              </div>
+
+              <div class="route-row">
+                <dt>Место посадки</dt>
+                <dd>летняя веранда кафе «Чайка Zaza», ул. Монастырская, 2</dd>
+                <dd>
+                  <a
+                    class="button button--secondary map-link"
+                    href="https://yandex.ru/maps/?text=%D0%9F%D0%B5%D1%80%D0%BC%D1%8C,%20%D1%83%D0%BB.%20%D0%9C%D0%BE%D0%BD%D0%B0%D1%81%D1%82%D1%8B%D1%80%D1%81%D0%BA%D0%B0%D1%8F,%202,%20%D0%A7%D0%B0%D0%B9%D0%BA%D0%B0%20Zaza"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Как добраться
+                  </a>
+                </dd>
+              </div>
+
+              <div class="route-row">
+                <dt>Маршрут</dt>
+                <dd>на волне воспоминаний, встреч и открытий</dd>
+              </div>
+
+              <div class="route-row">
+                <dt>Форма одежды</dt>
+                <dd>светлые тона: белый, молочный, navy и оттенки морской волны</dd>
+              </div>
+            </dl>
+
+            <div class="crew-map-strip" aria-hidden="true">
+              <svg viewBox="0 0 360 150" preserveAspectRatio="none">
+                <path class="map-river" d="M-20 108 C55 78 95 118 150 78 C205 38 250 65 300 30 C335 8 365 18 390 4" />
+                <path class="map-route" d="M35 113 C85 92 112 105 155 79 C205 49 240 61 288 35 C318 19 340 20 360 13" />
+                <circle class="map-point" cx="35" cy="113" r="4" />
+                <circle class="map-point" cx="155" cy="79" r="4" />
+                <circle class="map-point" cx="288" cy="35" r="4" />
+                <text class="map-label" x="235" y="125">р. Кама</text>
+                <text class="map-ship" x="305" y="48">⛵</text>
+                <text class="map-compass" x="44" y="48">✦</text>
+              </svg>
+            </div>
+          </div>
+        </section>
+
+        <section class="program section reveal" aria-labelledby="program-title">
+          <div class="section__frame">
+            <p class="section__kicker">Маршрут вечера</p>
+            <h2 id="program-title" class="section__title">Программа вечера</h2>
+            <div class="timeline">
+              <article class="timeline__item">
+                <div class="timeline__time">18:00</div>
+                <div class="timeline__body">
+                  Сбор гостей и welcome drink на веранде «Чайка Zaza»
+                </div>
+              </article>
+              <article class="timeline__item timeline__item--featured">
+                <div class="timeline__time">19:00</div>
+                <div class="timeline__body">
+                  <p>Все на борт!</p>
+                  <img
+                    class="timeline__image"
+                    src="./assets/images/ekohod.jpg"
+                    alt="Экоход для круиза-экспедиции"
+                  />
+                </div>
+              </article>
+              <article class="timeline__item">
+                <div class="timeline__time">23:00</div>
+                <div class="timeline__body">Окончание круиза</div>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="contacts section reveal" aria-labelledby="contacts-title">
+          <div class="section__frame contacts__card">
+            <p class="section__kicker">На связи</p>
+            <h2 id="contacts-title" class="section__title">Контакты</h2>
+            <p>
+              По всем вопросам, связанным с мероприятием, вы можете связаться с
+              моим организатором:
+            </p>
+            <div class="contact-person contacts__person">
+              <div>
+                <span class="contact-person__label">Организатор</span>
+                <strong class="contact-person__name">Алёна Татаренко</strong>
+              </div>
+              <a class="contact-person__phone" href="tel:+79641887146">
+                +7 (964) 188-71-46
+              </a>
+            </div>
+            <div class="contacts__actions">
+              <a class="button button--primary" href="tel:+79641887146">
+                Позвонить организатору
+              </a>
+              <a
+                class="button button--secondary"
+                href="https://wa.me/79641887146"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Написать в WhatsApp
+              </a>
+            </div>
+          </div>
+          <p class="footer-signature">До встречи на борту!</p>
+        </section>
+      </main>
+    </div>
+
+    <div class="modal" id="rsvp-modal" aria-hidden="true">
+      <div class="modal__backdrop" data-close-modal></div>
+      <div
+        class="modal__dialog"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="rsvp-modal-title"
+      >
+        <button class="modal__close" type="button" aria-label="Закрыть" data-close-modal>
+          ×
+        </button>
+        <div class="modal__content modal__content--form">
+          <h2 class="modal__title" id="rsvp-modal-title">Подтверждение участия</h2>
+          <p class="modal__text">
+            Пожалуйста, укажите Ваше ФИО, чтобы подтвердить присутствие на
+            круизе-экспедиции «На волне Левина».
+          </p>
+          <form
+            class="modal__form"
+            id="rsvp-form"
+            action="https://formsubmit.co/varvara.osoka@gmail.com"
+            method="POST"
+            target="rsvp-submit-frame"
+          >
+            <input type="hidden" name="_subject" value="Подтверждение участия — На волне Левина" />
+            <input type="hidden" name="_captcha" value="false" />
+            <input
+              type="hidden"
+              name="event"
+              value="Круиз-экспедиция «На волне Левина», 7 июля 2026"
+            />
+            <label class="modal__field">
+              <span>ФИО</span>
+              <input
+                type="text"
+                name="ФИО"
+                placeholder="Например, Иванов Иван Иванович"
+                required
+              />
+            </label>
+            <div class="modal__actions">
+              <button class="button button--primary modal__submit" type="submit">
+                Отправить подтверждение
+              </button>
+              <button class="button button--secondary modal__dismiss" type="button" data-close-modal>
+                Закрыть
+              </button>
+            </div>
+          </form>
+        </div>
+        <div class="modal__content modal__content--success" hidden>
+          <h2 class="modal__title">Подтверждение участия</h2>
+          <p class="modal__text">Спасибо! Подтверждение подготовлено к отправке.</p>
+          <button class="button button--primary modal__dismiss" type="button" data-close-modal>
+            Закрыть
+          </button>
+        </div>
+      </div>
+      <iframe
+        name="rsvp-submit-frame"
+        title="Скрытая отправка формы подтверждения"
+        hidden
+      ></iframe>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
