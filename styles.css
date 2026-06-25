@@ -34,6 +34,8 @@
 
 html {
   scroll-behavior: smooth;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 *,
@@ -46,6 +48,7 @@ body {
   margin: 0;
   min-width: 320px;
   overflow-x: clip;
+  max-width: 100%;
   font-family: Georgia, "Times New Roman", serif;
   color: var(--ink);
   background:
@@ -55,6 +58,11 @@ body {
 
 img {
   display: block;
+  max-width: 100%;
+}
+
+svg,
+video {
   max-width: 100%;
 }
 
@@ -311,6 +319,14 @@ a {
   align-items: center;
 }
 
+.invite-card__header {
+  margin-bottom: 18px;
+}
+
+.invite-card__body {
+  align-items: end;
+}
+
 .invitation__photo-card {
   position: relative;
   padding: 0;
@@ -333,6 +349,10 @@ a {
   min-width: 0;
 }
 
+.invite-card__text p:last-child {
+  margin-bottom: 0;
+}
+
 .invitation .section__title {
   font-size: clamp(34px, 9vw, 44px);
   line-height: 0.95;
@@ -353,6 +373,8 @@ a {
 }
 
 .invitation__button {
+  width: 100%;
+  margin-top: 20px;
   color: var(--navy);
   background: rgba(255, 255, 255, 0.92);
   border: 1px solid rgba(20, 49, 75, 0.12);
@@ -853,20 +875,362 @@ a {
     width: 176px;
   }
 
-  .invitation__grid {
-    grid-template-columns: 1fr;
-  }
-
-  .invitation__photo-card img {
-    height: 220px;
-  }
-
   .mood-photo__image {
     height: 260px;
   }
 
   .crew-card {
     padding: 24px 18px;
+  }
+}
+
+@media (max-width: 360px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .page-shell,
+  main {
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  .section {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .section__frame,
+  .crew-card,
+  .contacts__card,
+  .invite-card,
+  .contact-person,
+  .modal__dialog,
+  .mood-photo__image {
+    border-radius: 24px;
+  }
+
+  .section__frame {
+    padding: 1.15rem 1rem;
+  }
+
+  .hero {
+    min-height: 100svh;
+    padding: 24px 14px 22px;
+  }
+
+  .hero__content {
+    width: 58%;
+    max-width: 190px;
+  }
+
+  .hero__logo {
+    width: 92px;
+    margin-bottom: 12px;
+  }
+
+  .hero__eyebrow {
+    max-width: 150px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    line-height: 1.12;
+  }
+
+  .hero__title {
+    font-size: clamp(48px, 16vw, 58px);
+    line-height: 0.88;
+  }
+
+  .hero__date {
+    margin: 12px 0 14px;
+    font-size: 14px;
+  }
+
+  .hero__button {
+    width: 168px;
+    min-height: 48px;
+    padding: 0 14px;
+    font-size: 13px;
+    line-height: 1.08;
+  }
+
+  .hero__portrait-wrap {
+    right: -165px;
+    height: 82svh;
+  }
+
+  .mood-photo {
+    margin: 22px auto;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .mood-photo__image {
+    height: 230px;
+    object-position: center center;
+  }
+
+  .crew-card {
+    padding: 22px 16px;
+    border-radius: 26px;
+  }
+
+  .crew-card .section__kicker {
+    font-size: 11px;
+    letter-spacing: 0.16em;
+  }
+
+  .crew-card .section__title {
+    font-size: clamp(36px, 13vw, 46px);
+    line-height: 0.95;
+  }
+
+  .route-row {
+    padding: 11px 0;
+  }
+
+  .route-row dt {
+    font-size: 10.5px;
+    letter-spacing: 0.14em;
+  }
+
+  .route-row dd {
+    max-width: none;
+    font-size: 14.5px;
+    line-height: 1.38;
+  }
+
+  .crew-map-strip {
+    height: 125px;
+    margin-top: 18px;
+    margin-inline: 0;
+    border-radius: 22px;
+  }
+
+  .map-link {
+    min-height: 44px;
+    padding: 0 18px;
+    font-size: 14px;
+  }
+
+  .program .section__frame {
+    padding: 18px 16px;
+  }
+
+  .timeline {
+    gap: 0.85rem;
+  }
+
+  .timeline__item {
+    padding-left: 1.85rem;
+  }
+
+  .timeline__time {
+    font-size: 28px;
+  }
+
+  .timeline__body {
+    padding: 0.9rem;
+    font-size: 0.98rem;
+    line-height: 1.55;
+  }
+
+  .timeline__image {
+    border-radius: 20px;
+  }
+
+  .contacts__card {
+    padding: 24px 18px 32px;
+    border-radius: 26px;
+  }
+
+  .contact-person {
+    padding: 18px 16px;
+  }
+
+  .contact-person__name {
+    font-size: 19px;
+  }
+
+  .contact-person__phone {
+    width: 100%;
+    justify-content: center;
+    padding: 0 14px;
+    font-size: 15px;
+    white-space: nowrap;
+  }
+
+  .contacts .button,
+  .contacts a.button {
+    width: 100%;
+    min-height: 50px;
+    font-size: 14px;
+  }
+
+  .footer-signature,
+  .contacts .footer-signature {
+    margin-top: 24px;
+    font-size: clamp(25px, 8.5vw, 32px);
+  }
+
+  .modal {
+    padding: 14px;
+  }
+
+  .modal__dialog {
+    width: 100%;
+    max-width: 100%;
+    padding: 1.35rem 1rem 1rem;
+  }
+
+  .modal__close {
+    top: 0.65rem;
+    right: 0.65rem;
+  }
+
+  .modal__title {
+    font-size: clamp(1.8rem, 10vw, 2.45rem);
+  }
+
+  .modal__text {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  .modal__field input,
+  .rsvp-form input {
+    min-height: 48px;
+    font-size: 15px;
+  }
+
+  .rsvp-form__submit {
+    width: 100%;
+    min-height: 50px;
+  }
+}
+
+@media (max-width: 380px) {
+  .invite-card {
+    display: block;
+    padding: 24px 18px;
+    border-radius: 28px;
+  }
+
+  .invite-card__header {
+    margin-bottom: 18px;
+  }
+
+  .invite-card__header .section__kicker {
+    margin-bottom: 10px;
+    font-size: 11px;
+    letter-spacing: 0.17em;
+  }
+
+  .invite-card__header .section__title {
+    margin: 0;
+    font-size: clamp(38px, 12vw, 46px);
+    line-height: 0.92;
+  }
+
+  .invite-card__body {
+    display: grid;
+    grid-template-columns: 40% 1fr;
+    gap: 14px;
+    align-items: end;
+  }
+
+  .invite-card__photo-wrap {
+    min-height: 270px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    border-radius: 22px;
+    background: linear-gradient(180deg, rgba(232, 244, 247, 0.8), rgba(255,255,255,0.2));
+    overflow: hidden;
+  }
+
+  .invite-card__photo {
+    width: 125%;
+    max-width: none;
+    height: 265px;
+    object-fit: contain;
+    object-position: bottom center;
+  }
+
+  .invite-card__text p {
+    margin: 0 0 10px;
+    font-size: 14px;
+    line-height: 1.42;
+  }
+
+  .invite-card__button {
+    width: 100%;
+    margin-top: 18px;
+    min-height: 50px;
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 381px) and (max-width: 430px) {
+  .invite-card {
+    display: block;
+    padding: 26px 22px;
+    border-radius: 30px;
+  }
+
+  .invite-card__header {
+    margin-bottom: 18px;
+    text-align: left;
+  }
+
+  .invite-card__header .section__kicker {
+    margin-bottom: 10px;
+    font-size: 12px;
+    letter-spacing: 0.18em;
+  }
+
+  .invite-card__header .section__title {
+    max-width: 310px;
+    margin: 0;
+    font-size: clamp(42px, 11vw, 54px);
+    line-height: 0.92;
+  }
+
+  .invite-card__body {
+    display: grid;
+    grid-template-columns: 42% 1fr;
+    gap: 16px;
+    align-items: end;
+  }
+
+  .invite-card__photo-wrap {
+    min-height: 310px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    border-radius: 24px;
+    background: linear-gradient(180deg, rgba(232, 244, 247, 0.8), rgba(255,255,255,0.2));
+    overflow: hidden;
+  }
+
+  .invite-card__photo {
+    width: 115%;
+    max-width: none;
+    height: 300px;
+    object-fit: contain;
+    object-position: bottom center;
+  }
+
+  .invite-card__text p {
+    margin: 0 0 12px;
+    font-size: 15px;
+    line-height: 1.48;
+  }
+
+  .invite-card__button {
+    width: 100%;
+    margin-top: 20px;
+    min-height: 52px;
   }
 }
 
