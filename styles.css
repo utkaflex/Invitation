@@ -863,7 +863,7 @@ a {
 
 @media (max-width: 374px) {
   .hero__portrait-wrap {
-    right: -155px;
+    right: -130px;
     height: 82svh;
   }
 
@@ -955,7 +955,7 @@ a {
   }
 
   .hero__portrait-wrap {
-    right: -165px;
+    right: -125px;
     height: 82svh;
   }
 
@@ -1236,7 +1236,7 @@ a {
 
 @media (min-width: 375px) and (max-width: 480px) {
   .hero__portrait-wrap {
-    right: -140px;
+    right: -110px;
     bottom: -24px;
     height: 86svh;
   }
@@ -1248,7 +1248,7 @@ a {
 
 @media (min-width: 390px) and (max-width: 480px) {
   .hero__portrait-wrap {
-    right: -145px;
+    right: -115px;
     bottom: -28px;
     height: 88svh;
   }
