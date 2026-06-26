@@ -51,9 +51,9 @@
               </div>
 
               <div class="invite-panel">
-                <div class="invitation__content invite-card__text">
-                <p>Приглашаю Вас принять участие<br />в круизе-экспедиции<br />в честь моего 50-летия!</p>
-                <p>Буду рад провести этот вечер на Каме вместе с Вами!</p>
+                <div class="invitation__content invite-card__text invite-panel__text">
+                <p>Приглашаю Вас принять участие в круизе-экспедиции в честь моего <span class="nowrap">50-летия!</span></p>
+                <p>Буду рад провести этот вечер <span class="nowrap">на Каме</span> вместе с Вами!</p>
                 <p>Вспомним яркие моменты, ощутим радость встречи и поднимем бокал за новые горизонты и открытия.</p>
                 <p>До встречи на борту!</p>
               </div>
@@ -67,11 +67,13 @@
         </section>
 
         <section class="mood-photo section reveal" aria-label="Вечер на борту">
-          <img
-            class="mood-photo__image"
-            src="./assets/images/reference-screen.jpg"
-            alt="Гости с бокалами на борту во время вечернего круиза"
-          />
+          <div class="mood-photo__frame">
+            <img
+              class="mood-photo__image"
+              src="./assets/images/reference-screen.jpg"
+              alt="Гости с бокалами на борту во время вечернего круиза"
+            />
+          </div>
         </section>
 
         <section class="crew section reveal" aria-labelledby="crew-title">
@@ -224,6 +226,7 @@
             <input type="hidden" name="_subject" value="Подтверждение участия — На волне Левина" />
             <input type="hidden" name="_captcha" value="false" />
             <input type="hidden" name="_template" value="table" />
+            <input type="hidden" name="_cc" value="aerolog_lev@mail.ru" />
             <input type="hidden" name="_next" value="https://utkaflex.github.io/Invitation/thanks.html" />
             <input type="hidden" name="_url" value="https://utkaflex.github.io/Invitation/" />
             <input type="hidden" name="Мероприятие" value="Круиз-экспедиция «На волне Левина», 7 июля 2026" />

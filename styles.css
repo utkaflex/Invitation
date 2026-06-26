@@ -12,7 +12,7 @@
   --line: rgba(24, 50, 74, 0.12);
   --shadow: 0 24px 60px rgba(24, 50, 74, 0.1);
   --radius: 30px;
-  --section-gap: 0.8rem;
+  --section-gap: 28px;
 }
 
 @font-face {
@@ -63,6 +63,10 @@ img {
   max-width: 100%;
 }
 
+.nowrap {
+  white-space: nowrap;
+}
+
 svg,
 video {
   max-width: 100%;
@@ -78,9 +82,16 @@ a {
   margin: 0 auto;
 }
 
+main {
+  display: flex;
+  flex-direction: column;
+  gap: var(--section-gap);
+  padding: var(--section-gap) 0 32px;
+}
+
 .section {
   position: relative;
-  padding: var(--section-gap) 1rem;
+  padding: 0 1rem;
 }
 
 .section__frame {
@@ -432,7 +443,7 @@ a {
   position: relative;
   z-index: 2;
   margin-top: 28px;
-  padding: 22px 20px 20px;
+  padding: 22px 28px 20px;
   border-radius: 26px;
   background: rgba(20, 28, 38, 0.52);
   border: 1px solid rgba(255, 255, 255, 0.18);
@@ -446,11 +457,17 @@ a {
   min-width: 0;
 }
 
-.invite-panel .invite-card__text p {
-  margin: 0 0 14px;
-  color: rgba(255, 249, 241, 0.94);
+.invite-panel__text {
+  width: 100%;
+}
+
+.invite-panel__text p {
+  margin: 0 0 18px;
+  padding: 0;
+  color: rgba(255, 249, 241, 0.96);
   font-size: 15.5px;
-  line-height: 1.45;
+  line-height: 1.5;
+  text-align: left;
   text-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
 }
 
@@ -467,7 +484,7 @@ a {
   box-shadow: 0 10px 20px rgba(20, 49, 75, 0.12);
 }
 
-.invite-panel .invite-card__text p:last-child {
+.invite-panel__text p:last-child {
   margin-bottom: 0;
 }
 
@@ -486,19 +503,26 @@ a {
 }
 
 .mood-photo {
-  margin: 12px auto 8px;
-  width: min(100%, 460px);
+  width: 100%;
+  margin: 0 auto;
   padding: 0 16px;
+}
+
+.mood-photo__frame {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  border-radius: 28px;
+  box-shadow: 0 18px 34px rgba(20, 49, 74, 0.14);
 }
 
 .mood-photo__image {
   display: block;
   width: 100%;
-  height: 250px;
+  max-width: 100%;
+  height: 100%;
   object-fit: cover;
   object-position: center 58%;
-  border-radius: var(--radius);
-  box-shadow: 0 18px 34px rgba(20, 49, 74, 0.14);
 }
 
 .crew-card,
@@ -1056,10 +1080,6 @@ a {
     width: 176px;
   }
 
-  .mood-photo__image {
-    height: 236px;
-  }
-
   .crew-card {
     padding: 22px 18px;
   }
@@ -1141,13 +1161,17 @@ a {
   }
 
   .mood-photo {
-    margin: 10px auto 6px;
-    padding-left: 12px;
-    padding-right: 12px;
+    margin: 0 auto;
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  .mood-photo__frame {
+    aspect-ratio: 4 / 3;
+    border-radius: 24px;
   }
 
   .mood-photo__image {
-    height: 214px;
     object-position: center center;
   }
 
@@ -1306,14 +1330,14 @@ a {
   }
 
   .invite-panel {
-    padding: 20px 18px 18px;
+    padding: 20px 22px 18px;
     border-radius: 24px;
   }
 
-  .invite-panel .invite-card__text p {
-    font-size: 15px;
-    line-height: 1.42;
-    margin-bottom: 12px;
+  .invite-panel__text p {
+    font-size: 14.5px;
+    line-height: 1.45;
+    margin-bottom: 14px;
   }
 
   .invite-panel .invite-card__button {
@@ -1323,6 +1347,15 @@ a {
 }
 
 @media (min-width: 381px) and (max-width: 430px) {
+  .mood-photo {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .mood-photo__frame {
+    aspect-ratio: 16 / 10;
+  }
+
   .invite-card--photo-bg {
     min-height: auto;
     padding: 26px 22px;
@@ -1340,7 +1373,7 @@ a {
     line-height: 0.92;
   }
 
-  .invite-panel .invite-card__text p {
+  .invite-panel__text p {
     font-size: 15px;
     line-height: 1.46;
   }
@@ -1413,7 +1446,7 @@ a {
 
 @media (min-width: 768px) {
   .section {
-    padding: 0.95rem 1.2rem;
+    padding: 0 1.2rem;
   }
 
   .hero {
@@ -1455,7 +1488,7 @@ a {
     line-height: 0.95;
   }
 
-  .invite-panel .invite-card__text p {
+  .invite-panel__text p {
     font-size: 1rem;
     line-height: 1.65;
   }
