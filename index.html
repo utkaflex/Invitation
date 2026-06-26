@@ -43,39 +43,26 @@
 
       <main>
         <section class="invitation section reveal" aria-labelledby="invitation-title">
-          <div class="section__frame invite-card">
-            <div class="invite-card__header">
-              <p class="section__kicker">Личное приглашение</p>
-              <h2 id="invitation-title" class="section__title">Приглашение на борт</h2>
-            </div>
-
-            <div class="invitation__grid invite-card__body">
-              <div class="invitation__photo-card invite-card__photo-wrap">
-                <!-- При необходимости замените портрет на другой локальный файл. -->
-                <img
-                  class="invite-card__photo"
-                  src="./лю-Photoroom.png"
-                  alt="Портрет Льва Юрьевича для приглашения"
-                />
+          <div class="section__frame invite-card invite-card--photo-bg">
+            <div class="invite-card__content invite-card__content--photo">
+              <div class="invite-card__header">
+                <p class="section__kicker">Личное приглашение</p>
+                <h2 id="invitation-title" class="section__title">Приглашение на борт</h2>
               </div>
-              <div class="invitation__content invite-card__content invite-card__text">
-                <p>
-                  Приглашаю Вас принять участие в круизе-экспедиции «На волне
-                  Левина»!
-                </p>
-                <p>
-                  Буду рад провести этот вечер вместе с Вами на красавице Каме.
-                </p>
-                <p>
-                  Вспомним яркие моменты, ощутим радость встречи и поднимем бокал
-                  за новые горизонты и открытия.
-                </p>
+
+              <div class="invite-panel">
+                <div class="invitation__content invite-card__text">
+                <p>Приглашаю Вас принять участие<br />в круизе-экспедиции<br />в честь моего 50-летия!</p>
+                <p>Буду рад провести этот вечер на Каме вместе с Вами!</p>
+                <p>Вспомним яркие моменты, ощутим радость встречи и поднимем бокал за новые горизонты и открытия.</p>
+                <p>До встречи на борту!</p>
+              </div>
+
+                <a class="button button--secondary invitation__button invite-card__button js-rsvp-link" href="#rsvp">
+                Подтвердить присутствие
+                </a>
               </div>
             </div>
-
-            <a class="button button--secondary invitation__button invite-card__button js-rsvp-link" href="#rsvp">
-              Подтвердить присутствие
-            </a>
           </div>
         </section>
 
@@ -195,17 +182,18 @@
               <a class="button button--primary" href="tel:+79641887146">
                 Позвонить организатору
               </a>
+              <!-- Replace USERNAME_HERE with the organizer's real Telegram username. -->
               <a
+                id="telegram-link"
                 class="button button--secondary"
-                href="https://wa.me/79641887146"
+                href="https://t.me/USERNAME_HERE"
                 target="_blank"
                 rel="noreferrer"
               >
-                Написать в WhatsApp
+                Написать в Telegram
               </a>
             </div>
           </div>
-          <p class="footer-signature">До встречи на борту!</p>
         </section>
       </main>
     </div>

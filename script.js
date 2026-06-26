@@ -1,3 +1,5 @@
+const TELEGRAM_URL = "https://t.me/Tatarena";
+
 function bindRsvpLinks() {
   const modal = document.getElementById("rsvp-modal");
   const openers = document.querySelectorAll(".js-rsvp-link");
@@ -45,6 +47,17 @@ function bindRsvpLinks() {
   });
 }
 
+function initContactLinks() {
+  const telegramLink = document.getElementById("telegram-link");
+
+  if (!telegramLink) {
+    return;
+  }
+
+  // Replace USERNAME_HERE with the organizer's real Telegram username.
+  telegramLink.setAttribute("href", TELEGRAM_URL);
+}
+
 function initRevealAnimations() {
   const items = document.querySelectorAll(".reveal");
 
@@ -74,4 +87,5 @@ function initRevealAnimations() {
 }
 
 bindRsvpLinks();
+initContactLinks();
 initRevealAnimations();
