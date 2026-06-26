@@ -369,7 +369,7 @@ a {
 .invite-card--photo-bg {
   position: relative;
   overflow: hidden;
-  min-height: 620px;
+  min-height: auto;
   padding: 28px 24px;
   border-radius: 32px;
   background-image: url("./photo_2026-06-26_13-51-59.jpg");
@@ -377,6 +377,7 @@ a {
   background-position: center center;
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
   box-shadow:
     0 24px 48px rgba(24, 50, 74, 0.14),
     inset 0 1px 0 rgba(255, 255, 255, 0.16);
@@ -399,7 +400,6 @@ a {
 .invite-card__content--photo {
   position: relative;
   z-index: 2;
-  min-height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -1288,14 +1288,10 @@ a {
 
 @media (max-width: 380px) {
   .invite-card--photo-bg {
-    min-height: 590px;
+    min-height: auto;
     padding: 24px 20px;
     border-radius: 28px;
     background-position: center center;
-  }
-
-  .invite-card__content--photo {
-    min-height: 100%;
   }
 
   .invite-card__header .section__kicker {
@@ -1328,12 +1324,8 @@ a {
 
 @media (min-width: 381px) and (max-width: 430px) {
   .invite-card--photo-bg {
-    min-height: 610px;
+    min-height: auto;
     padding: 26px 22px;
-  }
-
-  .invite-card__content--photo {
-    min-height: 100%;
   }
 
   .invite-card__header .section__kicker {
@@ -1454,12 +1446,8 @@ a {
   }
 
   .invite-card--photo-bg {
-    min-height: 620px;
+    min-height: auto;
     background-position: center 46%;
-  }
-
-  .invite-card__content--photo {
-    min-height: 100%;
   }
 
   .invitation .section__title {
